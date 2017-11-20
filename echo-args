@@ -6,7 +6,7 @@
 # @author Jerry Lee (oldratlee at gmail dot com)
 
 readonly ebegin=$'\033[1;31m' # escape begin, red color
-readonly eend=$'\033[0m' # escape end
+readonly eend=$'\033[0m'      # escape end
 
 echoArg() {
     local index=$1
@@ -15,7 +15,7 @@ echoArg() {
 
     # if stdout is console, turn on color output.
     [ -t 1 ] &&
-        echo "$index/$count: $ebegin[$eend$value$ebegin]$eend" || 
+        echo "$index/$count: $ebegin[$eend$value$ebegin]$eend" ||
         echo "$index/$count: [$value]"
 }
 
